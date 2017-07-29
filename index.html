@@ -2,9 +2,110 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>demo</title>
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
+<div class="box">
+    <div class="swiper-container1">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/bg1_left1.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/bg2_left1.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/bg3_left1.jpg">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="swiper-container2">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/bg1_left2.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/bg2_left2.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/bg3_left2.jpg">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="swiper-container3">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/bg1_right1.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/bg2_right1.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/bg3_right1.jpg">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="swiper-container4">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/bg1_right2.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/bg2_right2.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/bg3_right2.jpg">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+<div class="bgBox">
+    <img src="images/bg4.png" alt="" class="bgCar">
+    <img src="images/t.png" alt="" class="text">
+</div>
+
+
+<script src="js/swiper-3.3.1.min.js"></script>
+<script>
+
+    window.onload = function () {
+        //1.获取标签
+        var bgBox = document.getElementsByClassName("bgBox")[0];
+        var box = document.getElementsByClassName("box")[0];
+
+        swp('.swiper-container1');
+        swp('.swiper-container2');
+        swp('.swiper-container3');
+        swp('.swiper-container4');
+
+        function swp(name) {
+            new Swiper(name, {
+                loop: true,
+                autoplay: 1000,
+                speed:1500,
+                paginationType:'progress',
+                effect: 'flip',
+            });
+        }
+        setTimeout(function () {
+            bgBox.style.display = "block";
+            box.style.display = "none";
+        }, 5000)
+    }
+
+</script>
 </body>
 </html>
