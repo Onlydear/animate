@@ -5,7 +5,7 @@
 }
 
 .swiper-wrapper img {
-    height: 100%;
+    height: 768px;
     width: 100%;
 }
 
@@ -45,11 +45,13 @@
     width: 100%;
     height: 768px;
     display: none;
+    overflow: hidden;
+    position: relative;
 }
 
 .bgCar{
     width: 100%;
-    height: 100%;
+    height: 768px;
     position: absolute;
     left: 0;
     top: 0;
@@ -57,7 +59,32 @@
 .text{
     width: 90%;
     height: 250px;
+    /*display: none;*/
+    opacity: 0;
     position: absolute;
     left: 20px;
-    top: 20px;
+    top: 250px;
+}
+.yun{
+    width: 150%;
+    height: 100%;
+    position: absolute;
+    animation: yunduo 3s linear 0s infinite normal;
+    -webkit-animation: yunduo 5s linear 0s infinite normal;
+}
+@keyframes yunduo {
+    from{
+        margin-left:100%;
+    }
+    to{
+        margin-left: -100%;
+    }
+}
+@-webkit-keyframes yunduo {
+    from{
+        margin-left:100%;
+    }
+    to{
+        margin-left: -100%;
+    }
 }
